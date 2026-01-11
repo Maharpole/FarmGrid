@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424cafca3f259e94faebe91dac39b288, type: 3}
+  m_Name: RockTileData
+  m_EditorClassIdentifier: Assembly-CSharp::TileData
+  tiles:
+  - {fileID: 11400000, guid: 2dc5562cc14d70e4d91c99137d2ac16e, type: 2}
+  - {fileID: 11400000, guid: 21cf42f2176e1af49805ead81010521a, type: 2}
+  - {fileID: 11400000, guid: e539e1572374de94ab55ee1ad7f5e61a, type: 2}
+  - {fileID: 11400000, guid: 614f0a8ff50dbd24fac4f6e189403a5e, type: 2}
+  - {fileID: 11400000, guid: db40041814f3cbe4e9b65f28194dd4da, type: 2}
+  - {fileID: 11400000, guid: a84bef4203ad7bf43bf0bfa47ac79678, type: 2}
+  - {fileID: 11400000, guid: 4c975f28589ee76498447b68c8938608, type: 2}
+  - {fileID: 11400000, guid: cb872ecf4a5a9f14e9d360904e236d3e, type: 2}
+  - {fileID: 11400000, guid: a1deb598490c913479a91a04284251ca, type: 2}
+  - {fileID: 11400000, guid: 9b7e64831d15a4c4ca93fe24c7d8cc9b, type: 2}
+  - {fileID: 11400000, guid: 501680fba170632478887646e1cedc25, type: 2}
+  - {fileID: 11400000, guid: 05bafe186cf21d148ba4303f55ca31fb, type: 2}
+  - {fileID: 11400000, guid: 5e01e1225b2f9d14cb7fb9536b0d3529, type: 2}
+  - {fileID: 11400000, guid: 8f4ac645be198c14a966ff9488278203, type: 2}
+  - {fileID: 11400000, guid: 7432e9ec6ee345a4abe289a041a2624f, type: 2}
+  tileType: 5

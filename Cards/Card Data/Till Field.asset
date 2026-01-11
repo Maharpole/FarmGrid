@@ -15,9 +15,10 @@ MonoBehaviour:
   cardName: Till Field
   cardDescription: Till a grassland to enable the planting of seeds.
   icon: {fileID: 0}
-  tileToPlace: {fileID: 0}
+  tileToPlace: {fileID: 11400000, guid: 822f83530ca29fa4f8c5166704c37276, type: 2}
   cardType: 1
   canPlaceOnEmpty: 0
+  validPlacementTiles: 00000000
   costs:
   - type: 5
     amount: 1

@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 
 namespace CardPackage
@@ -14,27 +12,13 @@ namespace CardPackage
         public string cardDescription;
         public Sprite icon;
         public TileBase tileToPlace;
-        public CardType  cardType;
+        public CardType cardType;
         public bool canPlaceOnEmpty = false;
+        public List<TileType> validPlacementTiles = new List<TileType>();
+        public CropDefinition cropToPlant;
 
-        [System.Serializable]
-        public struct CostEntry
-        {
-            public CostType type;
-            public int amount;
-        }
-
-        public List<CostEntry> costs = new List<CostEntry>();
-
-        public enum CostType
-        {
-            Water,
-            Earth,
-            Light,
-            Dark,
-            Air,
-            Time
-        }
+        [Header("Cost")]
+        public int apCost = 1;
 
         public enum CardType
         {
@@ -44,15 +28,6 @@ namespace CardPackage
             Animal,
             Land,
             Seed
-        }
-
-        public int GetCost(CostType t)
-        {
-            for (int i = 0; i < costs.Count; i++)
-            {
-                if (costs[i].type == t) return costs[i].amount;
-            }
-            return 0;
         }
     }
 }

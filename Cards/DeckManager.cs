@@ -47,7 +47,7 @@ void InitializeDeck()
     ShuffleDeck();
 }
 
-void ShuffleDeck()
+public void ShuffleDeck()
 {
     for (int i = drawPile.Count - 1; i > 0; i--)
     {
@@ -99,15 +99,33 @@ public void EndTurn()
 {
     turnNumber++;
     Debug.Log($"Turn {turnNumber} ended.");
-
-
+    TimeManager.Instance.PassTime();
+    MerchantManager.Instance.getMerchantButtonState();
+    
     if (InGameUIManager.Instance != null)
     {
         InGameUIManager.Instance.UpdateTurnDisplay(turnNumber);
     }
-    DrawCard(); // Draw 1 card at end of turn
+}
 
-    //add other end of turn logic here.
+public void DiscardHandAndReshuffle()
+{
+    // Get all cards from hand and add to discard pile
+    List<Card> handCards = handManager.DiscardEntireHand();
+    discardPile.AddRange(handCards);
+
+    // Shuffle discard into draw pile
+    drawPile.AddRange(discardPile);
+    discardPile.Clear();
+    ShuffleDeck();
+
+    Debug.Log($"Reshuffled deck. Draw pile: {drawPile.Count}");
+}
+
+public void DrawNewHand()
+{
+    DrawStartingHand(startingHandNum);
+    Debug.Log($"Drew {startingHandNum} cards for new day");
 }
 
 public int GetTurnNumber()
